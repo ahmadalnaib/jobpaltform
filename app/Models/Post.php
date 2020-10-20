@@ -3,26 +3,26 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
 
-class Profile extends Model
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
+
+class Post extends Model
 {
     use HasFactory;
-
 
     public  function user()
     {
         return $this->belongsTo(User::class,'user_id');
     }
 
-    protected $table='profile_users';
-    protected $fillable = [
-
+    use SoftDeletes;
+    protected $dates=['deleted_at'];
+    protected $fillable=[
         'user_id',
-        'bio',
-        'website',
-        'number'
+        'title',
+        'content',
+        'photo',
+        'slug'
     ];
-
-
 }

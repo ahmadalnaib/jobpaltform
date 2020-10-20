@@ -16,10 +16,10 @@ class CreateProfileUsers extends Migration
         Schema::create('profile_users', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('user_id')->unsigned();
-            $table->string('country');
-            $table->longText('bio');
-            $table->string('website');
-            $table->integer('number');
+            $table->string('country')->nullable();
+            $table->longText('bio')->nullable();
+            $table->string('website')->nullable();
+            $table->string('number')->nullable();
             $table->timestamps();
 
             $table->foreign('user_id')

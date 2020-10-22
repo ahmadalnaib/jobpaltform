@@ -40,13 +40,13 @@ class PostController extends Controller
            //save photo on public folder and change the name
         $photo=$request->photo;
         $newPhoto=time().$photo->getClientOriginalName();
-        $photo->move('uploads/posts'.$newPhoto);
+        $photo->move('uploads/posts',$newPhoto);
 
          $post=Post::create([
             'user_id'=>Auth::id(),
              'title'=>request('title'),
              'content'=>request('content'),
-             'photo'=>'uploads/posts'.$newPhoto,
+             'photo'=>'uploads/posts/'.$newPhoto,
              'slug'=>str_slug($request->title)
          ]);
 
@@ -80,14 +80,14 @@ class PostController extends Controller
         $request->validate([
             'title'=>'required',
             'content'=>'required',
-            'photo'=>'required|image'
+//            'photo'=>'required|image' not required for edit
         ]);
 
         if($request->has('photo')) {
             $photo=$request->photo;
             $newPhoto=time().$photo->getClientOriginalName();
-            $photo->move('uploads/posts'.$newPhoto);
-           $post->photo='uploads/posts'.$newPhoto;
+            $photo->move('uploads/posts',$newPhoto);
+           $post->photo='uploads/posts/'.$newPhoto;
         }
 
         $post->title=$request->title;
@@ -104,7 +104,7 @@ class PostController extends Controller
         //
         $post=Post::findOrFail($id);
         $post->delete();
-        return redirect('/');
+        return redirect()->back();
     }
 
     public function hdelete($id)
@@ -119,5 +119,13 @@ class PostController extends Controller
         $post=Post::withTrashed()->where('id',$id)->first();
         $post->restore();
         return redirect()->back();
+    }
+
+
+    public function myPosts()
+    {
+        $posts = auth()->user()->posts()->latest()->get();
+        // $jobs = Job::where('user_id', Auth::user()->id)->latest()->simplePaginate(8);
+        return view('posts.myposts',compact('posts'));
     }
 }

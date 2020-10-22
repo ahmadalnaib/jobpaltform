@@ -16,6 +16,17 @@ class Post extends Model
         return $this->belongsTo(User::class,'user_id');
     }
 
+
+//     for path the photo
+//<img src="{{URL::asset($post->photo)}}" class="img-thumbnail" width="50" height="50" alt="...">
+ //to
+    //   <img class="img-jobs" src="{{$post->photo}}" class="img-thumbnail"  alt="...">--}}
+    //                        </div>
+//    public function getFeaturedAttribute($photo)
+//    {
+//        return asset($photo);
+//    }
+
     use SoftDeletes;
     protected $dates=['deleted_at'];
     protected $fillable=[

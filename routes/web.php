@@ -29,15 +29,16 @@ Route::put('/profile/update',[ProfileController::class,'update'])->name('profile
 // Post controllers
 
 //Route::get('/',[PostController::class,'index'])->name('home');
-Route::get('/posts',[PostController::class,'index'])->name('posts');
+Route::get('/',[PostController::class,'index'])->name('posts');
 Route::get('/posts/trashed',[PostController::class,'postsTrashed'])->name('posts.trashed');
-Route::get('/post/create',[PostController::class,'create'])->name('post.create');
-Route::post('/post/store',[PostController::class,'store'])->name('post.store');
+Route::get('/post/create',[PostController::class,'create'])->name('post.create')->middleware('auth');
+Route::post('/post/store',[PostController::class,'store'])->name('post.store')->middleware('auth');;
 Route::get('/post/show/{slug}',[PostController::class,'show'])->name('post.show');
-Route::get('/post/edit/{id}',[PostController::class,'edit'])->name('post.edit');
-Route::put('/post/update/{id}',[PostController::class,'update'])->name('post.update');
-Route::get('/post/destroy/{id}',[PostController::class,'destroy'])->name('post.destroy');
-Route::get('/post/hdelete/{id}',[PostController::class,'hdelete'])->name('post.hdelete');
-Route::get('/post/restore/{id}',[PostController::class,'restore'])->name('post.restore');
+Route::get('/post/edit/{id}',[PostController::class,'edit'])->name('post.edit')->middleware('auth');;
+Route::put('/post/update/{id}',[PostController::class,'update'])->name('post.update')->middleware('auth');;
+Route::delete('/post/destroy/{id}',[PostController::class,'destroy'])->name('post.destroy')->middleware('auth');;
+Route::get('/post/hdelete/{id}',[PostController::class,'hdelete'])->name('post.hdelete')->middleware('auth');;
+Route::get('/post/restore/{id}',[PostController::class,'restore'])->name('post.restore')->middleware('auth');;
+Route::get('/post/myposts',[PostController::class,'myPosts'])->name('post.myposts')->middleware('auth');;
 
 

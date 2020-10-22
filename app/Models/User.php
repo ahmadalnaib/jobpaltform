@@ -19,6 +19,11 @@ class User extends Authenticatable
     }
 
 
+    public function posts()
+    {
+        return $this->hasMany(Post::class)->latest();
+    }
+
 
     protected $table = 'users';
     protected $fillable = [

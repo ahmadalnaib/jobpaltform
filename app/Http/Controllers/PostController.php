@@ -39,7 +39,7 @@ class PostController extends Controller
         ]);
            //save photo on public folder and change the name
         $photo=$request->photo;
-        $newPhoto=time().$photo.getClientOrginaName();
+        $newPhoto=time().$photo->getClientOriginalName();
         $photo->move('uploads/posts'.$newPhoto);
 
          $post=Post::create([
@@ -85,7 +85,7 @@ class PostController extends Controller
 
         if($request->has('photo')) {
             $photo=$request->photo;
-            $newPhoto=time().$photo.getClientOrginaName();
+            $newPhoto=time().$photo->getClientOriginalName();
             $photo->move('uploads/posts'.$newPhoto);
            $post->photo='uploads/posts'.$newPhoto;
         }

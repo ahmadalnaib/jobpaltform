@@ -32,10 +32,10 @@ Route::put('/profile/update',[ProfileController::class,'update'])->name('profile
 Route::get('/posts',[PostController::class,'index'])->name('posts');
 Route::get('/posts/trashed',[PostController::class,'postsTrashed'])->name('posts.trashed');
 Route::get('/post/create',[PostController::class,'create'])->name('post.create');
-Route::get('/post/store',[PostController::class,'store'])->name('post.store');
+Route::post('/post/store',[PostController::class,'store'])->name('post.store');
 Route::get('/post/show/{slug}',[PostController::class,'show'])->name('post.show');
 Route::get('/post/edit/{id}',[PostController::class,'edit'])->name('post.edit');
-Route::get('/post/update/{id}',[PostController::class,'update'])->name('post.update');
+Route::put('/post/update/{id}',[PostController::class,'update'])->name('post.update');
 Route::get('/post/destroy/{id}',[PostController::class,'destroy'])->name('post.destroy');
 Route::get('/post/hdelete/{id}',[PostController::class,'hdelete'])->name('post.hdelete');
 Route::get('/post/restore/{id}',[PostController::class,'restore'])->name('post.restore');

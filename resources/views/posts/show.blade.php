@@ -2,10 +2,7 @@
 
 @section('content')
 
-    <div class="show-page ">
 
-        <small class="text-muted">{{$post->created_at->diffForHumans()}}</small>
-    </div>
 
     <div class="show-all">
 
@@ -19,6 +16,9 @@
 
         </div>
     </div>
+    <div class="show-page ">
 
+        <small class="text-muted">{{$post->created_at->diffForHumans()}}</small>
+    </div>
 
 @endsection

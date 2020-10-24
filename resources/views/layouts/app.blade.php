@@ -49,6 +49,7 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                             </li>
+
                             @if (Route::has('register'))
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
@@ -72,6 +73,10 @@
                                     <a class="dropdown-item" href="{{ route('post.myposts') }}">
                                         {{ __('My posts') }}
                                     </a>
+                                    <a class="dropdown-item" href="{{ route('posts.trashed') }}">
+                                        {{ __('Trash') }}
+                                    </a>
+
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">

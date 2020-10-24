@@ -20,38 +20,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="19acbd10-1f35-45bc-a851-67c03182992c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/css/custom.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/posts/1603384649Screenshot (2).png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/posts/1603385143Screenshot (14).png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/posts/1603390780Chunk-4s-200px.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/posts/1603393081hero.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/posts/1603393148ring.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/posts/160339332866-c52d77bridges.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/posts/160339424730688242_10214199257649498_1831939693617348608_n.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/posts/160339433130688242_10214199257649498_1831939693617348608_n.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/posts/160339439166-c52d77bridges.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/posts/160339443830688242_10214199257649498_1831939693617348608_n.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/posts/160339450866-c52d77bridges.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/posts/1603394548119700494_10221228716221569_114676725104556986_o.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/posts/160339463366-c52d77bridges.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/posts/160339485430688242_10214199257649498_1831939693617348608_n.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/posts/160339556166-c52d77bridges.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/posts/1603395666119700494_10221228716221569_114676725104556986_o.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/posts/myposts.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/posts/160339884566-c52d77bridges.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/posts/160339935166-c52d77bridges.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/posts/160339945166-c52d77bridges.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/posts/1603564509claudio-schwarz-purzlbaum-TScGhJM716g-unsplash.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/posts/1603564608119700494_10221228716221569_114676725104556986_o.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProfileController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProfileController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Post.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Post.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/posts1603378192Screenshot (5).png/phpA65E.tmp" beforeDir="false" afterPath="$PROJECT_DIR$/public/uploads/posts/1603384549Screenshot (5).png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/posts1603378614Screenshot (4).png/php15A7.tmp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/posts1603378624Screenshot (4).png/php3CB8.tmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_18_154418_create_profile_users.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_18_154418_create_profile_users.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_20_170735_create_posts_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_20_170735_create_posts_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/posts/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/posts/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/posts/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/posts/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/posts/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/posts/create.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/posts/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/posts/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/posts/trashed.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/posts/trashed.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -221,7 +202,9 @@
       <workItem from="1603211167298" duration="1373000" />
       <workItem from="1603213777521" duration="3312000" />
       <workItem from="1603364836509" duration="1233000" />
-      <workItem from="1603371026631" duration="16054000" />
+      <workItem from="1603371026631" duration="18189000" />
+      <workItem from="1603528800519" duration="56000" />
+      <workItem from="1603564404337" duration="3302000" />
     </task>
     <servers />
   </component>

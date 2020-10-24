@@ -11,13 +11,12 @@ class PostController extends Controller
     public function index()
     {
 
-        $posts=Post::all();
+        $posts=Post::latest()->get();
         return view('posts.index',compact('posts'));
     }
 
   public  function postsTrashed()
   {
-
       $posts=Post::onlyTrashed()->get();
       return view('posts.trashed',compact('posts'));
 
@@ -110,7 +109,7 @@ class PostController extends Controller
     public function hdelete($id)
     {
         $post=Post::withTrashed()->where('id',$id)->first();
-        $post->foreceDelete();
+        $post->forceDelete();
          return redirect('/');
     }
 

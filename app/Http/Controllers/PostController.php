@@ -18,7 +18,8 @@ class PostController extends Controller
 
   public  function postsTrashed()
   {
-      $posts=Post::onlyTrashed()->get();
+
+      $posts=Post::onlyTrashed()->where('user_id',Auth::id())->get();
       return view('posts.trashed',compact('posts'));
 
   }
@@ -74,8 +75,13 @@ class PostController extends Controller
     public function edit($id)
     {
         //
-        $tags=Tag::all();
-        $post=Post::findOrFail($id);
+        $tags=Tag::all();$posts = auth()->user()->posts()->latest()->get();
+       //$post=Post::findOrFail($id);
+        $post=Post::where('id',$id)->where('user_id',Auth::id())->first();
+        if($post === null)
+        {
+            return  redirect()->back();
+        }
         return view('posts.edit',compact('post'),compact('tags'));
 
     }
@@ -111,7 +117,12 @@ class PostController extends Controller
     public function destroy($id)
     {
         //
-        $post=Post::findOrFail($id);
+//        $post=Post::findOrFail($id);
+        $post=Post::where('id',$id)->where('user_id',Auth::id())->first();
+        if($post === null)
+        {
+            return  redirect()->back();
+        }
         $post->delete();
         return redirect()->back();
     }

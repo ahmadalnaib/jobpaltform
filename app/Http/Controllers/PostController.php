@@ -11,9 +11,9 @@ class PostController extends Controller
 
     public function index()
     {
-
+        $tags=Tag::latest()->get();
         $posts=Post::latest()->get();
-        return view('posts.index',compact('posts'));
+        return view('posts.index',compact('posts'),compact('tags'));
     }
 
   public  function postsTrashed()
@@ -25,7 +25,12 @@ class PostController extends Controller
     public function create()
     {
         //
-        return view('posts.create');
+        $tags=Tag::all();
+        if($tags->count()==0)
+        {
+           return redirect()->route('tag.create');
+        }
+        return view('posts.create',compact('tags'));
     }
 
 
@@ -35,6 +40,7 @@ class PostController extends Controller
         $request->validate([
            'title'=>'required',
             'content'=>'required',
+            'tags'=>'required',
             'photo'=>'required|image'
         ]);
            //save photo on public folder and change the name
@@ -49,6 +55,8 @@ class PostController extends Controller
              'photo'=>'uploads/posts/'.$newPhoto,
              'slug'=>str_slug($request->title)
          ]);
+
+         $post->tag()->attach($request->tags);
 
          return redirect('/');
 
@@ -66,8 +74,9 @@ class PostController extends Controller
     public function edit($id)
     {
         //
+        $tags=Tag::all();
         $post=Post::findOrFail($id);
-        return view('posts.edit',compact('post'));
+        return view('posts.edit',compact('post'),compact('tags'));
 
     }
 
@@ -93,7 +102,7 @@ class PostController extends Controller
         $post->title=$request->title;
         $post->content=request('content');
         $post->save();
-
+        $post->tag()->sync($request->tags);
         return redirect('/');
 
     }

@@ -22,6 +22,12 @@
 
                           <h3><a href="{{route('post.show',$post->slug)}}">{{$post->title}}</a></h3>
                           <h4>{{$post->user->name}}</h4>
+                      <div>
+                          @foreach($tags as $tag)
+                              <span class="bg-dark text-white p-1 m-1">{{$tag->tag}}</span>
+                          @endforeach
+                      </div>
+
 
 
                     </div>

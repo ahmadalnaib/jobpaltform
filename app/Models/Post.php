@@ -17,6 +17,11 @@ class Post extends Model
     }
 
 
+    public function tag()
+    {
+        return $this->belongsToMany(Tag::class);
+    }
+
 //     for path the photo
 //<img src="{{URL::asset($post->photo)}}" class="img-thumbnail" width="50" height="50" alt="...">
  //to

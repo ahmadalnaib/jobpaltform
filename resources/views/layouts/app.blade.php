@@ -70,6 +70,13 @@
                                     <a class="dropdown-item" href="{{ route('post.create') }}">
                                         {{ __('Create post') }}
                                     </a>
+                                    <a class="dropdown-item" href="{{ route('tag.create') }}">
+                                        {{ __('Create Tags') }}
+                                    </a>
+                                    </a>
+                                    <a class="dropdown-item" href="{{ route('tags') }}">
+                                        {{ __('My tags') }}
+                                    </a>
                                     <a class="dropdown-item" href="{{ route('post.myposts') }}">
                                         {{ __('My posts') }}
                                     </a>

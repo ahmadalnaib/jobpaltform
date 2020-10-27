@@ -20,19 +20,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="19acbd10-1f35-45bc-a851-67c03182992c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/uploads/posts/160339884566-c52d77bridges.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/posts/160339935166-c52d77bridges.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/posts/160339945166-c52d77bridges.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/posts/1603564509claudio-schwarz-purzlbaum-TScGhJM716g-unsplash.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/posts/1603564608119700494_10221228716221569_114676725104556986_o.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/TagController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Tag.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_10_26_101927_create_tags_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/tags/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/tags/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/tags/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_18_154418_create_profile_users.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_18_154418_create_profile_users.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_20_170735_create_posts_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_20_170735_create_posts_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/posts/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/posts/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/posts/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/posts/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/posts/trashed.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/posts/trashed.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -174,6 +172,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -182,6 +181,11 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\jobpaltform\resources\views" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -204,7 +208,9 @@
       <workItem from="1603364836509" duration="1233000" />
       <workItem from="1603371026631" duration="18189000" />
       <workItem from="1603528800519" duration="56000" />
-      <workItem from="1603564404337" duration="3302000" />
+      <workItem from="1603564404337" duration="4019000" />
+      <workItem from="1603702079615" duration="5398000" />
+      <workItem from="1603806787910" duration="3342000" />
     </task>
     <servers />
   </component>
@@ -231,6 +237,10 @@
       <screen x="0" y="0" width="1504" height="1003" />
     </state>
     <state x="510" y="349" key="#Composer/0.0.1504.1003/-1920.167.1280.720@0.0.1504.1003" timestamp="1603032301058" />
+    <state x="418" y="197" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1603708423367">
+      <screen x="0" y="0" width="1504" height="1003" />
+    </state>
+    <state x="418" y="197" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1504.1003/-1920.167.1280.720@0.0.1504.1003" timestamp="1603708423367" />
     <state width="1449" height="246" key="GridCell.Tab.0.bottom" timestamp="1603058232898">
       <screen x="0" y="0" width="1504" height="1003" />
     </state>
@@ -251,5 +261,16 @@
       <screen x="0" y="0" width="1504" height="1003" />
     </state>
     <state x="540" y="401" key="NewPhpFileDialog/0.0.1504.1003/-1920.167.1280.720@0.0.1504.1003" timestamp="1603382854070" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/routes/web.php</url>
+          <line>31</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

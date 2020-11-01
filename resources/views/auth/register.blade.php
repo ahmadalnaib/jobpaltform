@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+    {!! NoCaptcha::renderJs() !!}
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -60,6 +61,14 @@
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
                             </div>
                         </div>
+                            <div class="{{$errors->has('g-recaptcha-response')?'has-error':''}}">
+                                {!! NoCaptcha::display() !!}
+                            </div>
+                        @if ($errors->has('g-recaptcha-response'))
+                            <span class="help-block">
+                        <strong>{{ $errors->first('g-recaptcha-response') }}</strong>
+                              </span>
+                        @endif
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
